@@ -29,7 +29,7 @@ function draw() {
 
   y += a;
   x += b;
-  circle(x, y, d);
+  Image(img, x, y, 100, 100);
 }
 
 function keyPressed() {
