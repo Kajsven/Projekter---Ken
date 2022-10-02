@@ -7,17 +7,17 @@ let b = 0;
 
 let x_2, y_2;
 let s = 70;
-var e = 2;
-var f = 2;
+let e = 2;
+let f = 2;
 
 let x_3, y_3;
-var g = 2;
-var h = 2;
+let g = 2;
+let h = 2;
 
 let mus;
 let kat;
 
-let m = "Fanget";
+let m = "Game Over";
 
 //Der preloades billeder, så de er klar til brug senere
 function preload() {
@@ -83,6 +83,23 @@ function draw() {
     console.log(m);
   } else if (x + d > x_3 && x < x_3 + s && y + d > y_3 && y < y_3 + s) {
     console.log(m);
+  }
+
+  //Hastigheden på kattene øges gradvis, så længe cirklerne er inden for canvas.
+  if (
+    y_2 > 0 &&
+    y_2 < height &&
+    x_2 > 0 &&
+    x_2 < width &&
+    y_3 > 0 &&
+    y_3 < height &&
+    x_3 > 0 &&
+    x_3 < width
+  ) {
+    e *= random(1, 1.001);
+    f *= random(1, 1.0005);
+    g *= random(1, 1.0005);
+    h *= random(1, 1.001);
   }
 }
 
